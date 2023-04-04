@@ -1,0 +1,655 @@
+local lib = loadstring(game:HttpGet("https://pastebin.com/raw/riec74Sx"))()
+
+local win = lib:Create("AimWare","Da hood")
+local a = win:tab("Aimlocks",true)
+local b = win:tab("Player",false)
+local c = win:tab("Combat",false)
+local d = win:tab("Teleports",false)
+local e = win:tab("Cash tools",false)
+local f = win:tab("Misc",false)
+local g = win:tab("Credits",false)
+
+-- Tab 1
+
+a:label("ONLY INJECT ONE LOCK AT A TIME OR IT LAGS")
+
+a:button("Tempes Lock(C)",false,function(v)
+    loadstring(game:HttpGet('https://pastebin.com/raw/cNuQpghg'))()
+end)
+
+a:button("Camlock(Resolver)",false,function(v)
+    loadstring(game:HttpGet('https://pastebin.com/raw/n6L5bLGu'))()
+end)
+
+a:button("Dns lock(c)",false,function(v)
+    loadstring(game:HttpGet('https://pastebin.com/raw/KPjYPz6Y'))()
+end)
+
+a:button("White dot lock(c)",false,function(v)
+   loadstring(game:HttpGet('https://pastebin.com/raw/jRUEwKYt'))() 
+end)
+
+-- Tab 2
+
+b:button("Fly script(x)",false,function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/sDKjh2Ye'))()
+end)
+
+b:button("Bike fly(q to go slow e to go fast)",false,function()
+    loadstring(game:HttpGetAsync("https://paste.website/p/a07c1662-6e1d-48fe-aa15-e3341d607965.txt"))()  
+end)
+
+
+b:button("Animation pack",false,function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ImNotZack/Da-Hood/main/Animation%20Pack.lua", true))()
+end)
+
+
+b:button("Animation pack++",false,function(v)
+    repeat
+        wait()
+    until game:IsLoaded() and game.Players.LocalPlayer.Character:FindFirstChild("FULLY_LOADED_CHAR") and game.Players.LocalPlayer.PlayerGui.MainScreenGui:FindFirstChild("AnimationPack")
+    
+    if game.ReplicatedStorage.ClientAnimations:FindFirstChild("Lean") then
+        game.ReplicatedStorage.ClientAnimations.Lean:Destroy()
+    end
+    
+    if game.ReplicatedStorage.ClientAnimations:FindFirstChild("Lay") then
+        game.ReplicatedStorage.ClientAnimations.Lay:Destroy()
+    end
+    
+    if game.ReplicatedStorage.ClientAnimations:FindFirstChild("Dance1") then
+        game.ReplicatedStorage.ClientAnimations.Dance1:Destroy()
+    end
+    
+    if game.ReplicatedStorage.ClientAnimations:FindFirstChild("Dance2") then
+        game.ReplicatedStorage.ClientAnimations.Dance2:Destroy()
+    end
+    
+    if game.ReplicatedStorage.ClientAnimations:FindFirstChild("Greet") then
+        game.ReplicatedStorage.ClientAnimations.Greet:Destroy()
+    end
+    
+    if game.ReplicatedStorage.ClientAnimations:FindFirstChild("Chest Pump") then
+        game.ReplicatedStorage.ClientAnimations["Chest Pump"]:Destroy()
+    end
+    
+    if game.ReplicatedStorage.ClientAnimations:FindFirstChild("Praying") then
+        game.ReplicatedStorage.ClientAnimations.Praying:Destroy()
+    end
+    
+    local Animations = game.ReplicatedStorage.ClientAnimations
+    
+    local LeanAnimation = Instance.new("Animation", Animations)
+    LeanAnimation.Name = "Lean"
+    LeanAnimation.AnimationId = "rbxassetid://3152375249"
+    
+    local LayAnimation = Instance.new("Animation", Animations)
+    LayAnimation.Name = "Lay"
+    LayAnimation.AnimationId = "rbxassetid://3152378852"
+    
+    local Dance1Animation = Instance.new("Animation", Animations)
+    Dance1Animation.Name = "Dance1"
+    Dance1Animation.AnimationId = "rbxassetid://3189773368"
+    
+    local Dance2Animation = Instance.new("Animation", Animations)
+    Dance2Animation.Name = "Dance2"
+    Dance2Animation.AnimationId = "rbxassetid://3189776546"
+    
+    local GreetAnimation = Instance.new("Animation", Animations)
+    GreetAnimation.Name = "Greet"
+    GreetAnimation.AnimationId = "rbxassetid://3189777795"
+    
+    local ChestPumpAnimation = Instance.new("Animation", Animations)
+    ChestPumpAnimation.Name = "Chest Pump"
+    ChestPumpAnimation.AnimationId = "rbxassetid://3189779152"
+    
+    local PrayingAnimation = Instance.new("Animation", Animations)
+    PrayingAnimation.Name = "Praying"
+    PrayingAnimation.AnimationId = "rbxassetid://3487719500"
+    
+    function AnimationPack(Character)
+        Character:WaitForChild'Humanoid'
+        repeat
+            wait()
+        until game.Players.LocalPlayer.Character:FindFirstChild("FULLY_LOADED_CHAR") and game.Players.LocalPlayer.PlayerGui.MainScreenGui:FindFirstChild("AnimationPack")
+    
+        local AnimationPack = game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.AnimationPack
+        local ScrollingFrame = AnimationPack.ScrollingFrame
+        local CloseButton = AnimationPack.CloseButton
+    
+        local Lean = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(LeanAnimation)
+    
+        local Lay = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(LayAnimation)
+    
+        local Dance1 = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(Dance1Animation)
+    
+        local Dance2 = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(Dance2Animation)
+    
+        local Greet = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(GreetAnimation)
+    
+        local ChestPump = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(ChestPumpAnimation)
+    
+        local Praying = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(PrayingAnimation)
+    
+        AnimationPack.Visible = true
+    
+        AnimationPack.ScrollingFrame.UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+    
+        for i,v in pairs(ScrollingFrame:GetChildren()) do
+            if v.Name == "TextButton" then
+                if v.Text == "Lean" then
+                    v.Name = "LeanButton"
+                end
+            end
+        end
+    
+        for i,v in pairs(ScrollingFrame:GetChildren()) do
+            if v.Name == "TextButton" then
+                if v.Text == "Lay" then
+                    v.Name = "LayButton"
+                end
+            end
+        end
+    
+        for i,v in pairs(ScrollingFrame:GetChildren()) do
+            if v.Name == "TextButton" then
+                if v.Text == "Dance1" then
+                    v.Name = "Dance1Button"
+                end
+            end
+        end
+    
+        for i,v in pairs(ScrollingFrame:GetChildren()) do
+            if v.Name == "TextButton" then
+                if v.Text == "Dance2" then
+                    v.Name = "Dance2Button"
+                end
+            end
+        end
+    
+        for i,v in pairs(ScrollingFrame:GetChildren()) do
+            if v.Name == "TextButton" then
+                if v.Text == "Greet" then
+                    v.Name = "GreetButton"
+                end
+            end
+        end
+    
+        for i,v in pairs(ScrollingFrame:GetChildren()) do
+            if v.Name == "TextButton" then
+                if v.Text == "Chest Pump" then
+                    v.Name = "ChestPumpButton"
+                end
+            end
+        end
+    
+        for i,v in pairs(ScrollingFrame:GetChildren()) do
+            if v.Name == "TextButton" then
+                if v.Text == "Praying" then
+                    v.Name = "PrayingButton"
+                end
+            end
+        end
+    
+        function Stop()
+            Lean:Stop()
+            Lay:Stop()
+            Dance1:Stop()
+            Dance2:Stop()
+            Greet:Stop()
+            ChestPump:Stop()
+            Praying:Stop()
+        end
+    
+        local LeanTextButton = ScrollingFrame.LeanButton
+        local LayTextButton = ScrollingFrame.LayButton
+        local Dance1TextButton = ScrollingFrame.Dance1Button
+        local Dance2TextButton = ScrollingFrame.Dance2Button
+        local GreetTextButton = ScrollingFrame.GreetButton
+        local ChestPumpTextButton = ScrollingFrame.ChestPumpButton
+        local PrayingTextButton = ScrollingFrame.PrayingButton
+    
+        AnimationPack.MouseButton1Click:Connect(function()
+            if ScrollingFrame.Visible == false then
+                ScrollingFrame.Visible = true
+                CloseButton.Visible = true
+            end
+        end)
+        CloseButton.MouseButton1Click:Connect(function()
+            if ScrollingFrame.Visible == true then
+                ScrollingFrame.Visible = false
+                CloseButton.Visible = false
+            end
+        end)
+        LeanTextButton.MouseButton1Click:Connect(function()
+            Stop()
+            Lean:Play()
+        end)
+        LayTextButton.MouseButton1Click:Connect(function()
+            Stop()
+            Lay:Play()
+        end)
+        Dance1TextButton.MouseButton1Click:Connect(function()
+            Stop()
+            Dance1:Play()
+        end)
+        Dance2TextButton.MouseButton1Click:Connect(function()
+            Stop()
+            Dance2:Play()
+        end)
+        GreetTextButton.MouseButton1Click:Connect(function()
+            Stop()
+            Greet:Play()
+        end)
+        ChestPumpTextButton.MouseButton1Click:Connect(function()
+            Stop()
+            ChestPump:Play()
+        end)
+        PrayingTextButton.MouseButton1Click:Connect(function()
+            Stop()
+            Praying:Play()
+        end)
+    
+        game:GetService("Players").LocalPlayer.Character.Humanoid.Running:Connect(function()
+            Stop()
+        end)
+    
+        game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
+            Stop()
+        end)
+    end
+    AnimationPack(game.Players.LocalPlayer.Character)
+    game.Players.LocalPlayer.CharacterAdded:Connect(AnimationPack)
+end)
+
+b:button("Trash talk",false,function(v)
+    local Player = game.Players.LocalPlayer
+local TrashTalk = {"LOL", "GET CLAPPED BY AIMWARE", ".gg/nVSEhKQcFr", "YOUR EZ", "My grandma can play better then you", "Go back to aim training"}
+local Mouse = Player:GetMouse()
+local Cooldown = 0.5
+local CooldownWaited = 0
+ 
+local Key = "h"
+ 
+function TalkTrash(k)
+    if k == Key and CooldownWaited == 0 then
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(TrashTalk[math.random(1,#TrashTalk)], "All")
+        CooldownWaited = Cooldown
+        
+        repeat wait(Cooldown) CooldownWaited = 0 until CooldownWaited == 0
+    end
+end
+ 
+Mouse.KeyDown:Connect(TalkTrash)
+end
+
+b:input("Fov","Setfov",true,function(t)
+	game:GetService'Workspace'.Camera.FieldOfView = t
+end)
+
+b:toggle("Anti-aim Enabled",false,function(t)
+    enabled = t
+	
+	if enabled == t then
+		while enabled == true do
+			wait()
+game.Players.LocalPlayer.Character.Humanoid.HipHeight = 6
+wait()
+game.Players.LocalPlayer.Character.Humanoid.HipHeight = 2
+		end
+	end
+end)
+
+
+-- Tab 3
+
+c:toggle("Bag everyone",false,function(state)
+    if state then
+
+        local bag = true
+        local takingbag = true
+        local Plr = game.Players.LocalPlayer
+        repeat wait(1)
+            if game.Players.LocalPlayer.Character:FindFirstChild("[BrownBag]") == nil then
+                repeat
+                    takingbag = true
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-314.580566, 51.1788902, -727.484558)
+                    wait()
+                    fireclickdetector(workspace.Ignored.Shop["[BrownBag] - $25"].ClickDetector)
+                until Plr.Backpack:FindFirstChild("[BrownBag]")
+                Plr.Backpack["[BrownBag]"].Parent = Plr.Character
+                takingbag = false
+            end
+        
+            if takingbag == false then
+                local chars
+                for i, v  in pairs(game.Players:GetPlayers()) do
+                    if v.Character and v.Character:FindFirstChild("Christmas_Sock") == nil and v.Character:FindFirstChild("FULLY_LOADED_CHAR") and v ~= Plr then
+                        chars = v.Character
+                        if Plr.Character:FindFirstChild("[BrownBag]") then
+                            Plr.Character["[BrownBag]"]:Activate()
+                        end
+                        Plr.Character.HumanoidRootPart.CFrame = v.Character.UpperTorso.CFrame * CFrame.new(0, 0, -2)
+                    end
+                    wait(0.005)
+                end
+                if not chars then
+                    bag = false
+                end
+            end
+        until bag == false
+
+    else
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Toggled",
+            Text = "Toggled Auto bag off "
+        })
+    end  
+end)
+
+c:toggle("Fist reach",false,function()
+loadstring(game:HttpGet("https://pastebin.com/raw/aZHK690D"))()
+end)
+
+c:toggle("Esp Toggle",false,function(state)
+    if state then
+    
+        --[Main Variables]
+
+local plrs = game["Players"]
+local rs = game["RunService"]
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local UserInputService = game:GetService("UserInputService")
+local Lighting = game:GetService("Lighting")
+local Teams = game:GetService("Teams")
+local RunService = game:GetService("RunService")
+local TeleportService = game:GetService("TeleportService")
+
+
+local LocalPlayer = Players.LocalPlayer
+local Mouse = LocalPlayer:GetMouse()
+local CurrentCamera = workspace.CurrentCamera
+local plr = plrs.LocalPlayer
+local mouse = plr:GetMouse()
+local camera = workspace.CurrentCamera
+local worldToViewportPoint = camera.worldToViewportPoint
+local cc = Instance.new("ColorCorrectionEffect", game.Lighting)
+local blur = Instance.new("BlurEffect", game.Lighting)
+local sun = Instance.new("SunRaysEffect", game.Lighting)
+blur.Size = 0
+sun.Intensity = 0
+
+--[Optimisation Variables]
+
+local Drawingnew = Drawing.new
+local Color3fromRGB = Color3.fromRGB
+local Vector3new = Vector3.new
+local Vector2new = Vector2.new
+local mathfloor = math.floor
+local mathceil = math.ceil
+
+--[Setup Table]
+
+local esp = {
+    players = {},
+    enabled = true,
+    teamcheck = true,
+    fontsize = 16,
+    font = 0,
+    settings = {
+        name = {enabled = true, outline = true, color = Color3fromRGB(255, 255, 255), outlineColor = Color3fromRGB(94, 0, 255)},
+        box = {enabled = true, outline = true, color = Color3fromRGB(131, 105, 165), outlineColor = Color3fromRGB(0, 0, 0)},
+        healthbar = {enabled = true, outline = true, color = Color3fromRGB(111, 0, 255), outlineColor = Color3fromRGB(0, 0, 0)},
+        healthtext = {enabled = true, outline = true, color = Color3fromRGB(255, 255, 255), outlineColor = Color3fromRGB(94, 0, 255)},
+        distance = {enabled = true, outline = true, color = Color3fromRGB(255, 255, 255), outlineColor = Color3fromRGB(94, 0, 255)}
+    }
+}
+
+esp.NewDrawing = function(type, properties)
+    local newDrawing = Drawingnew(type)
+
+    for i,v in next, properties or {} do
+        newDrawing[i] = v
+    end
+
+    return newDrawing
+end
+
+esp.NewPlayer = function(v)
+    esp.players[v] = {
+        name = esp.NewDrawing("Text", {Color = Color3fromRGB(94, 0, 255), Outline = true, Center = true, Size = 13, Font = 0}),
+        boxOutline = esp.NewDrawing("Square", {Color = Color3fromRGB(0, 0, 0), Thickness = 3}),
+        box = esp.NewDrawing("Square", {Color = Color3fromRGB(108, 11, 204), Thickness = 1}),
+        healthBarOutline = esp.NewDrawing("Line", {Color = Color3fromRGB(0, 0, 0), Thickness = 3}),
+        healthBar = esp.NewDrawing("Line", {Color = Color3fromRGB(255, 255, 255), Thickness = 1}),
+        healthText = esp.NewDrawing("Text", {Color = Color3fromRGB(94, 0, 255), Outline = true, Center = true, Size = 13, Font = 0}),
+        distance = esp.NewDrawing("Text", {Color = Color3fromRGB(94, 0, 255), Outline = true, Center = true, Size = 13, Font = 0})
+    }
+end
+
+for _,v in ipairs(plrs:GetPlayers()) do
+    esp.NewPlayer(v)
+end
+
+plrs.PlayerAdded:Connect(function(v)
+    esp.NewPlayer(v)
+end)
+
+plrs.PlayerRemoving:Connect(function(v)
+    for i,v in pairs(esp.players[v]) do
+        v:Remove()
+    end
+    esp.players[v] = nil
+end)
+
+local mainLoop = rs.RenderStepped:Connect(function()
+    for i,v in pairs(esp.players) do
+        if i ~= plr and i.Character and i.Character:FindFirstChild("Humanoid") and i.Character:FindFirstChild("HumanoidRootPart") and i.Character:FindFirstChild("Head") then
+            local hum = i.Character.Humanoid
+            local hrp = i.Character.HumanoidRootPart
+            local head = i.Character.Head
+
+            local Vector, onScreen = camera:WorldToViewportPoint(i.Character.HumanoidRootPart.Position)
+    
+            local Size = (camera:WorldToViewportPoint(hrp.Position - Vector3new(0, 3, 0)).Y - camera:WorldToViewportPoint(hrp.Position + Vector3new(0, 2.6, 0)).Y) / 2
+            local BoxSize = Vector2new(mathfloor(Size * 1.5), mathfloor(Size * 1.9))
+            local BoxPos = Vector2new(mathfloor(Vector.X - Size * 1.5 / 2), mathfloor(Vector.Y - Size * 1.6 / 2))
+    
+            local BottomOffset = BoxSize.Y + BoxPos.Y + 1
+
+            if onScreen and esp.enabled then
+                if esp.settings.name.enabled then
+                    v.name.Position = Vector2new(BoxSize.X / 2 + BoxPos.X, BoxPos.Y - 16)
+                    v.name.Outline = esp.settings.name.outline
+                    v.name.Text = tostring(i)
+                    v.name.Color = esp.settings.name.color
+                    v.name.OutlineColor = esp.settings.name.outlineColor
+                    v.name.Font = esp.font
+                    v.name.Size = esp.fontsize
+
+                    v.name.Visible = true
+                else
+                    v.name.Visible = false
+                end
+
+                if esp.settings.distance.enabled and plr.Character and plr.Character:FindFirstChild("HumanoidRootPart") then
+                    v.distance.Position = Vector2new(BoxSize.X / 2 + BoxPos.X, BottomOffset)
+                    v.distance.Outline = esp.settings.distance.outline
+                    v.distance.Text = "[" .. mathfloor((hrp.Position - plr.Character.HumanoidRootPart.Position).Magnitude) .. "m]"
+                    v.distance.Color = esp.settings.distance.color
+                    v.distance.OutlineColor = esp.settings.distance.outlineColor
+                    BottomOffset = BottomOffset + 15
+
+                    v.distance.Font = esp.font
+                    v.distance.Size = esp.fontsize
+
+                    v.distance.Visible = true
+                else
+                    v.distance.Visible = false
+                end
+
+                if esp.settings.box.enabled then
+                    v.boxOutline.Size = BoxSize
+                    v.boxOutline.Position = BoxPos
+                    v.boxOutline.Visible = esp.settings.box.outline
+                    v.boxOutline.Color = esp.settings.box.outlineColor
+    
+                    v.box.Size = BoxSize
+                    v.box.Position = BoxPos
+                    v.box.Color = esp.settings.box.color
+                    v.box.Visible = true
+                else
+                    v.boxOutline.Visible = false
+                    v.box.Visible = false
+                end
+
+                if esp.settings.healthbar.enabled then
+                    v.healthBar.From = Vector2new((BoxPos.X - 5), BoxPos.Y + BoxSize.Y)
+                    v.healthBar.To = Vector2new(v.healthBar.From.X, v.healthBar.From.Y - (hum.Health / hum.MaxHealth) * BoxSize.Y)
+                    v.healthBar.Color = esp.settings.healthbar.color
+                    v.healthBar.Visible = true
+
+                    v.healthBarOutline.From = Vector2new(v.healthBar.From.X, BoxPos.Y + BoxSize.Y + 1)
+                    v.healthBarOutline.To = Vector2new(v.healthBar.From.X, (v.healthBar.From.Y - 1 * BoxSize.Y) -1)
+                    v.healthBarOutline.Color = esp.settings.healthbar.outlineColor
+                    v.healthBarOutline.Visible = esp.settings.healthbar.outline
+                else
+                    v.healthBarOutline.Visible = false
+                    v.healthBar.Visible = false
+                end
+
+                if esp.settings.healthtext.enabled then
+                    v.healthText.Text = tostring(mathfloor((hum.Health / hum.MaxHealth) * 100 + 0.5))
+                    v.healthText.Position = Vector2new((BoxPos.X - 20), (BoxPos.Y + BoxSize.Y - 1 * BoxSize.Y) -1)
+                    v.healthText.Color = esp.settings.healthtext.color
+                    v.healthText.OutlineColor = esp.settings.healthtext.outlineColor
+                    v.healthText.Outline = esp.settings.healthtext.outline
+
+                    v.healthText.Font = esp.font
+                    v.healthText.Size = esp.fontsize
+
+                    v.healthText.Visible = true
+                else
+                    v.healthText.Visible = false
+                end
+
+                if esp.teamcheck then
+                    if v.TeamColor ~= plr.TeamColor then
+                        v.name.Visible = esp.settings.name.enabled
+                        v.box.Visible = esp.settings.box.enabled
+                        v.healthBar.Visible = esp.settings.healthbar.enabled
+                        v.healthText.Visible = esp.settings.healthtext.enabled
+                        v.distance.Visible = esp.settings.distance.enabled
+                    else
+                        v.name.Visible = false
+                        v.boxOutline.Visible = false
+                        v.box.Visible = false
+                        v.healthBarOutline.Visible = false
+                        v.healthBar.Visible = false
+                        v.healthText.Visible = false
+                        v.distance.Visible = false
+                    end
+                end
+            else
+                v.name.Visible = false
+                v.boxOutline.Visible = false
+                v.box.Visible = false
+                v.healthBarOutline.Visible = false
+                v.healthBar.Visible = false
+                v.healthText.Visible = false
+                v.distance.Visible = false
+            end
+        else
+            v.name.Visible = false
+            v.boxOutline.Visible = false
+            v.box.Visible = false
+            v.healthBarOutline.Visible = false
+            v.healthBar.Visible = false
+            v.healthText.Visible = false
+            v.distance.Visible = false
+        end
+    end
+end)
+
+getgenv().esp = esp
+
+else
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Toggled",
+        Text = "Esp toggled"
+    })
+end  
+end)
+
+d:button("Bank teleport",false,function(v)
+    if v then
+    loadstring(game:HttpGet("https://pastebin.com/raw/sA2VHRHB"))()
+end)
+
+d:button("Police teleport",false,function(v)
+    if v then
+    loadstring(game:HttpGet("https://pastebin.com/raw/9enax2vC"))()
+end)
+
+d:button("Shoe shop teleport",false,function(v)
+    if v then
+    loadstring(game:HttpGet("https://pastebin.com/raw/3uJcXTCQ"))()
+end)
+
+d:button("Admin base teleport",false,function(v)
+    if v then
+    loadstring(game:HttpGet("https://pastebin.com/raw/2jiaCDey"))()
+end)
+
+
+f:toggle("Phone call annoy",false,function(state)
+    if state then
+        local StarterGui = game:GetService("StarterGui")
+for i,v in pairs(game.Players:GetChildren()) do
+    if v.Name ~= game.Players.LocalPlayer.Name then
+        game.Players.LocalPlayer.Backpack["[Phone]"].Parent = game.Players.LocalPlayer.Character
+        game.ReplicatedStorage.MainEvent:FireServer("PhoneCall", tostring(v.Name))
+        task.wait()
+        game.Players.LocalPlayer.Character["[Phone]"].Parent = game.Players.LocalPlayer.Backpack
+        task.wait()
+        local success, result = pcall(StarterGui.SetCoreGuiEnabled, StarterGui, Enum.CoreGuiType.Backpack, true)
+        task.wait(.2)
+    end
+end
+
+else 
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Toggled",
+        Text = "Toggled Call everyone off"
+    })
+end
+end)
+
+f:button("Mind control(Carry then uncarry then hold with mouse)",false,function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/AQXmLAm3"))()
+end)
+
+f:button("Headless[FE]",false,function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/94d4cyWv"))()
+end)
+
+f:button("Headless[Client](v2)",false,function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/MTu0r4tm"))()
+end)
+
+f:button("Korblox[Client]",false,function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/06mYS048"))()
+end)
+
+f:button("Ball[FE]",false,function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/E4PZ2dAH"))()
+end)
+
+f:button("Chat spy",false,function()
+    print("Chatspy loading")
+    wait(1)
+    print("Chatspyloaded")
+    loadstring(game:HttpGet("https://pastebin.com/raw/yuaPqDW8"))()
+end)
