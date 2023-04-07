@@ -4497,3 +4497,4 @@ aroundtarget = function(speed, distance,height,target)
     regera = regera + speed
     player.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(regera), 0) * CFrame.new(0, height, distance)
 end
+
