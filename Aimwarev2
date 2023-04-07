@@ -1,3 +1,10 @@
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Aimware.WTF",
+    Text = "Aimware is loading please wait"
+})
+
+wait(5)
+
 repeat wait() until game:IsLoaded()
 
 game:GetService("CorePackages").Packages:Destroy()
@@ -56,15 +63,15 @@ library.theme = {
     fontsize = 17,
     titlesize = 18,
     font = Enum.Font.Code,
-    background = "rbxassetid://0",
+    background = "https://cdn.discordapp.com/attachments/1092035461410734182/1092744398690865152/Zw.png",
     tilesize = 90,
     cursor = false,
     cursorimg = "https://t0.rbxcdn.com/42f66da98c40252ee151326a82aab51f",
     backgroundcolor = Color3.fromRGB(20, 20, 20),
-    tabstextcolor = Color3.fromRGB(10, 10, 10),
+    tabstextcolor = Color3.fromRGB(168,122,207),
     bordercolor = Color3.fromRGB(75, 207, 255),
-    accentcolor = Color3.fromRGB(168,122,207),
-    accentcolor2 = Color3.fromRGB(88,65,108),
+    accentcolor = Color3.fromRGB(244,67,54),
+    accentcolor2 = Color3.fromRGB(244,67,54),
     outlinecolor = Color3.fromRGB(20,20,20),
     outlinecolor2 = Color3.fromRGB(30,30,30),--119, 64, 167
     sectorcolor = Color3.fromRGB(30, 30, 30),
@@ -109,7 +116,7 @@ function library:CreateWatermark(name, position)
     local gamename = marketplaceservice:GetProductInfo(game.PlaceId).Name
     local watermark = { }
     watermark.Visible = true
-    watermark.text = " " .. name:gsub("{game}", gamename):gsub("{fps}", "0 FPS") .. " "
+    watermark.text = "Aimware.WTF" .. name:gsub("{game}", gamename):gsub("{fps}", "0 FPS") .. " "
 
     watermark.main = Instance.new("ScreenGui", coregui)
     watermark.main.Name = "Watermark"
@@ -4497,4 +4504,3 @@ aroundtarget = function(speed, distance,height,target)
     regera = regera + speed
     player.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(regera), 0) * CFrame.new(0, height, distance)
 end
-
